@@ -5,7 +5,7 @@ class Rocket():
     def __init__(self, screen):
         self.screen = screen
         """Carregar a imagem da espaçonave e obtém seu rect"""
-        self.image = pygame.image.load('images/rocket.bmp')
+        self.image = pygame.image.load("C:\\learnigCode\\python-start\\alien_invasion_game\\rocket.png")
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
         """Inicia cada nova espaçonave na parte inferior central da tela"""
