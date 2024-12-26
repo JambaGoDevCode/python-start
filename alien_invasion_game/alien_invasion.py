@@ -1,10 +1,12 @@
 import pygame
 import sys
+from settings import Settings
 
 def run_game():
     # Inicializando o jogo e cria um objeto para a tela
     pygame.init() 
-    screen = pygame.display.set_mode((1200, 800))
+    ai_settings = Settings()
+    screen = pygame.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
     pygame.display.set_caption("Alien Invasion")
     bg_color = (230, 230, 230)
         # Inicia olaço principal do jogo 
@@ -15,7 +17,7 @@ def run_game():
                 sys.exist()
                 # Deixa a tela mais recente visível 
         # Redesenha a tela a cada passagem pelo laço
-        screen.fill(bg_color)
+        screen.fill(ai_settings.bg_color)
         pygame.display.flip()
         
 run_game()
