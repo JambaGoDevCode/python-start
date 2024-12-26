@@ -14,7 +14,7 @@ def run_game():
         # Observa enventos de teclado e de mouse
         for event in pygame.event.get(): #
             if event.type == pygame.QUIT: 
-                sys.exist()
+                sys.exit()
                 # Deixa a tela mais recente visível 
         # Redesenha a tela a cada passagem pelo laço
         screen.fill(ai_settings.bg_color)
