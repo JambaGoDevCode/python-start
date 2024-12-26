@@ -1,7 +1,7 @@
 import pygame
-import sys
 from settings import Settings
 from rocket import Rocket
+import game_functions as gf
 
 def run_game():
     # Inicializando o jogo e cria um objeto para a tela
@@ -13,14 +13,6 @@ def run_game():
     rocket = Rocket(screen)
         # Inicia olaço principal do jogo 
     while True: 
-        # Observa enventos de teclado e de mouse
-        for event in pygame.event.get(): #
-            if event.type == pygame.QUIT: 
-                sys.exit()
-                # Deixa a tela mais recente visível 
-        # Redesenha a tela a cada passagem pelo laço
-        screen.fill(ai_settings.bg_color)
-        rocket.blitme()
-        pygame.display.flip()
-        
+        gf.Check_envents()
+        gf.Update_screen(ai_settings, screen, rocket)
 run_game()
