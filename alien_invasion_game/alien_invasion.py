@@ -10,7 +10,7 @@ def run_game():
     screen = pygame.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
     pygame.display.set_caption("Alien Invasion")
     """Criar uma espaçonave"""
-    rocket = Rocket(screen)
+    rocket = Rocket(ai_settings,screen)
         # Inicia olaço principal do jogo 
     while True: 
         gf.Check_envents(rocket)
