@@ -13,6 +13,6 @@ def run_game():
     rocket = Rocket(screen)
         # Inicia olaço principal do jogo 
     while True: 
-        gf.Check_envents()
+        gf.Check_envents(rocket)
         gf.Update_screen(ai_settings, screen, rocket)
 run_game()
