@@ -22,12 +22,14 @@ class Rocket():
     
     def Update(self):
         """Atualiza a posição da espaçonave de acordo com a flag de movimento"""
-        if self.moving_right:
+        if self.moving_right and self.rect.right < self.screen_rect.right:
             self.rect.centerx += 1
+            """Atualiza o valor do centro da espaçonave, e não o retângulo"""
             self.center += self.ai_settings.rocket_speed_factor
-        if self.moving_left:
+        if self.moving_left and self.rect.left > 0:
             self.rect.centerx -= 1
             self.center -= self.ai_settings.rocket_speed_factor
+        """Atualiza o objeto rect de acordo com self.center"""
         self.rect.centerx = self.center
     
             
