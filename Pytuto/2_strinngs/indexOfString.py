@@ -20,3 +20,5 @@ Although the length of the string is 12, since the indexing in Python starts wit
 the number of the last element is therefore 11
 '''
 
+
+
